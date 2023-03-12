@@ -1,0 +1,122 @@
+.main-container-my-services {
+  width: 100%;
+  height: auto;
+}
+
+.text-my-services {
+  width: 100%;
+  background-color: #FFED00;
+}
+
+.text-my-services-center-container {
+  max-width: 1200px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.my-services-header-hight-text {
+  display: flex;
+  justify-content: space-between;
+  font-size: 4.5em;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  padding: 0.5em 0;
+  color: #000;
+}
+
+.my-services-header-logo {
+  width: 76px;
+  height: 76px;
+}
+
+.center-container-my-services {
+  max-width: 1200px;
+  height: auto;
+  margin: 40px auto;
+}
+
+.parallax-bg-img {
+  width: 100vw;
+  height: 100vh;
+  filter: grayscale(100%) blur(3px);
+}
+
+.content-container-my-services {
+  width: 100%;
+  height: auto;
+  display: flex;
+  gap: 40px;
+  flex-flow: row wrap;
+}
+
+.stainless-welding {
+  flex: 0.5;
+}
+
+.construction-welding-img, .stainless-welding-img {
+  position: relative;
+}
+
+.welding-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  position: absolute;
+  bottom: 30px;
+  right: -20px;
+  z-index: 100;
+  width: 350px;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #FFED00;
+}
+.welding-banner:before {
+  content: "";
+  border-width: 10px;
+  border-color: #FFED00 transparent transparent #FFED00;
+  border-style: solid;
+  position: absolute;
+  bottom: -20px;
+  right: 0;
+  z-index: -1;
+}
+
+.welding-banner-text {
+  font-family: "Roboto Mono", Monaco, Consolas, "Courier New", monospace;
+  color: #000000;
+  font-size: 1.5em;
+}
+
+.stainless-welding-bg {
+  width: 100%;
+  max-height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.construction-welding {
+  flex: 0.5;
+}
+
+.welding-list {
+  display: block;
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+}
+.welding-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Roboto Mono", Monaco, Consolas, "Courier New", monospace;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #000000;
+  padding: 1em 0;
+  border-bottom: 5px solid #FFED00;
+  list-style-type: none;
+}
+.welding-list li :nth-child(1) {
+  margin-left: 40px;
+}/*# sourceMappingURL=MyServices.css.map */

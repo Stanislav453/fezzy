@@ -1,0 +1,111 @@
+.about-us-container {
+  width: 100%;
+  height: auto;
+  padding: 150px 0;
+  background-color: #fff;
+}
+
+.about-us-content-container {
+  width: 1200px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-us-item-container {
+  display: flex;
+  gap: 55px;
+}
+
+.about-us-image-container {
+  flex: 0.4;
+  position: relative;
+}
+.about-us-image-container:before {
+  content: "";
+  background: #FFED00;
+  display: block;
+  width: calc(50% + 35px);
+  height: 50%;
+  z-index: 1;
+  position: absolute;
+  right: 35px;
+  left: 0px;
+  box-shadow: 1px 1px 8px #000;
+}
+
+.about-us-img {
+  position: relative;
+  z-index: 100;
+  width: 500px;
+  height: 450px;
+  padding-top: 35px;
+  padding-left: 35px;
+}
+
+.about-us-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  position: absolute;
+  bottom: 60px;
+  right: -40px;
+  z-index: 100;
+  width: 350px;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #FFED00;
+}
+.about-us-banner::before {
+  content: "";
+  border-width: 20px;
+  border-color: #FFED00 transparent transparent #FFED00;
+  border-style: solid;
+  position: absolute;
+  bottom: -40px;
+  right: 0;
+  z-index: -1;
+}
+.about-us-banner p {
+  flex: 0.8;
+  font-size: 1em;
+  color: #000000;
+}
+
+.about-us-star {
+  flex: 0.2;
+  color: #000000;
+  font-size: 67px;
+}
+
+.about-us-text-container {
+  flex: 0.6;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+.about-us-text-container header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.about-us-text-container header h4 {
+  font-size: 4em;
+  color: yellow;
+  text-shadow: 1px 1px 1px #000;
+  align-self: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.about-us-text-container header .about-us-underline {
+  width: 100px;
+  height: 5px;
+  background-color: yellow;
+  align-self: center;
+  box-shadow: 1px 1px 1px #000;
+}
+.about-us-text-container p {
+  width: 100%;
+  color: #000000;
+  font-size: 1em;
+  line-height: 2em;
+}/*# sourceMappingURL=AboutUs.css.map */

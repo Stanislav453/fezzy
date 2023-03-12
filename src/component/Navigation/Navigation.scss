@@ -1,0 +1,251 @@
+@import "../../variables/variables";
+
+// * {
+//     outline: 1px solid red;
+// }
+
+.navigation-bg {
+    background-color: $second-color;
+
+}
+
+//MOBILE MENU ICON------------------------------------------------------------------------------------------------
+
+.navigation-contact-box {
+    display: flex;
+    gap: .6em;
+}
+
+.mobile-phone-icon,
+.mobile-menu-icon,
+.mobile-close-icon {
+    display: none;
+    font-size: 2em;
+    color: $third-color;
+
+}
+
+.mobile-menu-icon {
+    color: $main-color;
+}
+
+//GENERAL-------------------------------------------------------------------------------------------------------
+
+.nav-link,h4,a {
+    font-family: $main-font;
+}
+
+h6 {
+    font-family: $second-font;
+}
+
+//NAVIGATION-CONTACT---------------------------------------------------------------------------------------
+
+.navigation-b {
+    border-top: 1px solid yellow;
+}
+
+.navigation-contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em 0;
+}
+
+.fezzy-logo{
+    width: 30px;
+    height: 30px;
+}
+
+.contact-container {
+    display: flex;
+    gap: 1em;
+}
+
+.contact-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .1875em;
+}
+
+.contact-icon {
+    flex: .04;
+}
+
+.phone-box-icon {
+    color: $third-color;
+    font-size: clamp(1.4em, 1.5em, 1.6em)
+}
+
+.contact-text {
+    flex: 1;
+    display: flex;
+    gap: 0.125em;
+
+    h4,a {
+        font-size: clamp(.8em, .9em, 1em);
+    }
+
+    a {
+        color: $third-color;
+        text-decoration: none;
+        padding-bottom: .1875em;
+        border-bottom: 1px solid $third-color;
+        transition: color .3s;
+
+        &:hover {
+            color: darken($third-color, 10%);
+            transition: color .3s;
+        }
+    }
+}
+
+//NAVIGATION-LINK-----------------------------------------------------------------------------------------
+
+.navigation-link-main-container {
+    border-top: 2px solid $third-color;
+}
+
+.navigation-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-link {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5%;
+    padding: 1.5625em 0;
+    
+    li {
+        list-style: none;
+
+        .link {
+            color: $main-color;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color .3s;
+            cursor: pointer;
+
+
+            &:hover {
+                color: $third-color;
+                transition: color .3s;
+            }
+        }
+    }
+}
+
+.link-icon-instagram {
+    flex: .2;
+    font-size: 2em;
+    color: $third-color;
+    transform: scale(1.0);
+    transition: transform .3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.2);
+        transition: transform .3s ease-in-out;
+    }
+}
+
+@media( max-width: 800px ) {
+
+//NAVIGATION CONTACT------------------------------------------------------------------------------------    
+
+    .mobile-phone-icon,
+    .mobile-close-icon,
+    .mobile-menu-icon {
+        display: block;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        padding: 1.5em;
+        position: absolute;
+        z-index: 100;
+        top: -300px;
+        right: 0;
+        background-color: $third-color;
+        transition: top.3s ease-out;
+    }
+
+    .contact-icon {
+        display: none;
+    }
+
+    .contact-text {
+        flex-direction: column;
+
+        h4 {
+            color: $second-color;
+        }
+
+        a {
+            background-color: $second-color;
+            padding: .5em 1em;
+        }
+    }
+
+//NAVIGATION LINK --------------------------------------------------------------------------------
+
+.navigation-b {
+    position: absolute;
+    top: -500px;
+    left: 0;
+    z-index: 999;
+    background-color: $second-color;
+    transition: top .5s ease-in-out;
+    
+    .center-container {
+        padding: 0;
+    }
+}
+
+    .navigation-link {
+    flex-direction: column;
+
+    }
+
+    .nav-link {
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+
+        li {
+
+            .link {
+                width: 100%;
+                padding: 1em 0;
+                display: block;
+                color: $second-color;
+                background-color: $third-color;
+                border-bottom: 1px solid $second-color;
+
+                &:hover {
+                    color: $second-color;
+                }
+            }
+        
+        }
+    }
+
+    .navigation-link-icon {
+        padding: 1em 0;
+    }
+
+}
+
+.show-navigation-b {
+    top: 65px;
+    transition: top .5s ease-in-out;
+}
+
+.show-contact-container {
+    top: 62px;
+    transition: top .5s ease-in-out;
+}

@@ -1,0 +1,35 @@
+@import "../../variables/variables";
+
+.back-to-home-button-container {
+    position: fixed;
+    right: .4em;
+    bottom: .4em;
+
+}
+
+.back-to-home-button {
+    font-size: clamp(5em, 7em, 8em);
+    color: $third-color;
+    filter: drop-shadow(1px 1px 5px #000);
+    transform: scale(1);
+    transition:  transform .5s ease-in-out;
+    transform: scale(0);
+    transition: transform .5s ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+        transition:  transform .5s ease-in-out;
+    }
+}
+
+.back-to-home-button-show {
+    transform: scale(1);
+    transition: transform .5s ease-in-out;
+}
+
+@media ( max-width: 520px ) {
+
+    .back-to-home-button {
+        font-size: 5em;
+    }
+}
