@@ -1,132 +1,86 @@
 @import "../../variables/variables";
 
-.my-services-m {
-    margin-top: 2.5em;
-    margin-bottom: 2.5em;
+.service-header {
+  width: 100%;
+  height: auto;
+  text-align: center;
 }
 
-
-//HEADER MY SERVICES------------------------------------------------------------------------------------------
-.text-my-services {
-    width: 100%;
-    background-color: $third-color;
+.header-background {
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: $second-color, $alpha: 0.7);
 }
 
-// PARALLAX-------------------------------------------------------------------------------------------------
-.parallax-bg-img {
-    width: 100vw;
-    height: 100vh;
-    filter: grayscale(100%) blur(3px);
+.service-hight-text {
+  display: inline-block;
+  margin: 1.5em 0;
+  padding: 0.3em 0.6em;
+  font-family: $main-font;
+  font-weight: 600;
+  font-size: clamp(3em, 10vw, 4.5em);
+  text-transform: uppercase;
+  color: $main-color;
+  background-color: rgba($color: $second-color, $alpha: 0.8);
 }
 
-// CONTENT CONTAINER------------------------------------------------------------------------------------------
-.content-container-my-services {
-    width: 100%;
-    height: auto;
-    display: flex;
-    gap: 40px;
-    flex-direction: row;
+.service-category {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  grid-auto-rows: auto;
+  grid-auto-flow: dense;
+  margin: 1em 0;
+  font-family: $main-font;
+  color: $second-color;
 }
 
-.stainless-welding {
-    flex: .5;
+.service-category-item {
+  list-style: none;
+}
+
+.category-item-img {
+  position: relative;
+  height: auto;
 
 }
 
-.construction-welding-img, .stainless-welding-img {
-    position: relative;
-}
+.service-banner {
+  position: absolute;
+  bottom: 1em;
+  right: -10px;
+  width: 250px;
+  padding: .5em 0;
+  background-color: $second-color;
 
-
-.welding-banner {
-
-    position: absolute;
-    bottom: 30px;
-    right: -20px;
-    z-index: 100;
-    width: 350px;
-    max-width: 400px;
-    padding: 1.25em 1.875em;
-    background-color: #FFED00;
-
- &:before {
+   &:before {
     content: '';
-    border-width: 10px;
-    border-color: #FFED00 transparent transparent #FFED00;
+    border-width: 5px;
+    border-color: $second-color transparent transparent $second-color;
     border-style: solid;
     position: absolute;
-    bottom: -20px;
+    bottom: -10px;
     right: 0;
-    z-index: -1;
+    z-index: 100;
  }
-
 }
 
-.welding-banner-text {
-    font-family: $main-font;
-    color: $second-color;
-    font-size: 1.5em;
+.service-banner > h3 {
+  text-align: center;
+  color: $main-color;
 }
 
-.stainless-welding-bg {
-    width: 100%;
-    max-height: 300px;
-    object-fit: cover;
-
+.category-item-img > img {
+  max-height: 200px;
+  object-fit: cover;
 }
 
-.construction-welding {
-    flex: .5;
-}
-
-// WELDING LIST --------------------------------------------------------------------------------------------
-
-.welding-list {
-    display: block;
-    width: 100%;
-    height: auto;
-    background-color: $main-color;
-
-
-    li {
-        font-family: $main-font;
-        font-size: 1.5em;
-        font-weight: 600;
-        color: $second-color;
-        padding: 1em 1.5em;
-        border-bottom: 5px solid $third-color;
-        list-style-type: none;
-
-        :nth-child(1) {
-            margin-left: 40px;
-           
-        }
-    }
+.category-item-desc {
+  background-color: $third-color;
+  padding: 1em;
 }
 
 
-@media ( max-width: 920px ) {
-
-    .content-container-my-services {
-        flex-direction: column;
-    }
-
-}
-
-@media ( max-width: 520px ) {
-
-    .welding-list {
-
-        li {
-            font-size: 1em;
-        }
-    }
-
-    .welding-banner-text {
-        font-size: 1.2em;
-    }
-
-    .stainless-welding-bg {
-        max-height: 200px;
-    }
+.category-item-desc > p {
+  line-height: 1.5em;
 }

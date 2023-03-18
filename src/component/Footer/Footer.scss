@@ -1,0 +1,23 @@
+@import "../../variables/variables";
+
+.footer-bg {
+  background-color: $third-color;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  padding: 1em 0;
+}
+
+.footer-link {
+  color: $second-color;
+  transform: scale(1);
+  transition: transform 0.5s ease-in-out;
+  align-self: flex-start;
+
+  &:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s ease-in-out;
+  }
+}

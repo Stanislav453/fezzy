@@ -1,251 +1,209 @@
 @import "../../variables/variables";
 
-// * {
-//     outline: 1px solid red;
-// }
-
-.navigation-bg {
-    background-color: $second-color;
-
+.navigation-container {
+  max-width: 100%;
+  height: auto;
 }
 
-//MOBILE MENU ICON------------------------------------------------------------------------------------------------
-
-.navigation-contact-box {
-    display: flex;
-    gap: .6em;
+// NAVIGATION-TOP
+.navigation-top {
+  background-color: $second-color;
+  padding: 0.5em 0;
 }
 
-.mobile-phone-icon,
-.mobile-menu-icon,
-.mobile-close-icon {
-    display: none;
-    font-size: 2em;
-    color: $third-color;
-
+.mobile-icon {
+  font-size: 2.5em;
+  color: $third-color;
 }
 
-.mobile-menu-icon {
-    color: $main-color;
+.navigation-top-content {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
 }
 
-//GENERAL-------------------------------------------------------------------------------------------------------
+.navigation-top-list {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 
-.nav-link,h4,a {
-    font-family: $main-font;
-}
+  .phone-box-icon {
+    font-size: 1em;
+    margin-right: 0.2rem;
+  }
 
-h6 {
-    font-family: $second-font;
-}
-
-//NAVIGATION-CONTACT---------------------------------------------------------------------------------------
-
-.navigation-b {
-    border-top: 1px solid yellow;
-}
-
-.navigation-contact {
+  li {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 1em 0;
-}
+    list-style-type: none;
 
-.fezzy-logo{
-    width: 30px;
-    height: 30px;
-}
+    h4,
+    a {
+      font-size: 0.8em;
+      font-family: $main-font;
+    }
 
-.contact-container {
-    display: flex;
-    gap: 1em;
-}
-
-.contact-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: .1875em;
-}
-
-.contact-icon {
-    flex: .04;
-}
-
-.phone-box-icon {
-    color: $third-color;
-    font-size: clamp(1.4em, 1.5em, 1.6em)
-}
-
-.contact-text {
-    flex: 1;
-    display: flex;
-    gap: 0.125em;
-
-    h4,a {
-        font-size: clamp(.8em, .9em, 1em);
+    h4 {
+      font-weight: 300;
     }
 
     a {
-        color: $third-color;
-        text-decoration: none;
-        padding-bottom: .1875em;
-        border-bottom: 1px solid $third-color;
-        transition: color .3s;
+      margin-left: 0.4rem;
+      color: $third-color;
+      transition: color 0.3s ease-in-out;
 
-        &:hover {
-            color: darken($third-color, 10%);
-            transition: color .3s;
-        }
+      &:hover {
+        color: lighten($third-color, 10%);
+        transition: color 0.3s ease-in-out;
+      }
     }
-}
-
-//NAVIGATION-LINK-----------------------------------------------------------------------------------------
-
-.navigation-link-main-container {
-    border-top: 2px solid $third-color;
-}
-
-.navigation-link {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-link {
-    flex: 1;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5%;
-    padding: 1.5625em 0;
-    
-    li {
-        list-style: none;
-
-        .link {
-            color: $main-color;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color .3s;
-            cursor: pointer;
-
-
-            &:hover {
-                color: $third-color;
-                transition: color .3s;
-            }
-        }
-    }
+  }
 }
 
 .link-icon-instagram {
-    flex: .2;
-    font-size: 2em;
-    color: $third-color;
-    transform: scale(1.0);
-    transition: transform .3s ease-in-out;
+  font-size: 1em;
+  color: $main-color;
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
 
-    &:hover {
-        transform: scale(1.2);
-        transition: transform .3s ease-in-out;
-    }
+  &:hover {
+    transform: scale(1.3);
+    transition: transform 0.3s ease-in-out;
+  }
 }
 
-@media( max-width: 800px ) {
+// NAVIGATION-BOTTOM
+.navigation-bottom {
+  width: 100%;
+  height: auto;
+  padding: 2rem;
+  background-color: $main-color;
+}
 
-//NAVIGATION CONTACT------------------------------------------------------------------------------------    
+.navigation-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
 
-    .mobile-phone-icon,
-    .mobile-close-icon,
-    .mobile-menu-icon {
-        display: block;
+  li {
+    list-style-type: none;
+
+    .link {
+      font-family: $main-font;
+      font-weight: 900;
+      color: $second-color;
+      border-bottom: 0;
+      cursor: pointer;
+      transition: border-bottom 0.1s ease-in-out;
+
+      &:hover {
+        border-bottom: 3px solid $four-color;
+        transition: border-bottom 0.1s ease-in-out;
+      }
     }
+  }
+}
 
-    .contact-container {
-        flex-direction: column;
-        padding: 1.5em;
-        position: absolute;
-        z-index: 100;
-        top: -300px;
-        right: 0;
-        background-color: $third-color;
-        transition: top.3s ease-out;
-    }
+.navigation-bottom-icon {
+  display: none;
+  padding: 0.5em 0;
+}
 
-    .contact-icon {
-        display: none;
-    }
+.navigation-bottom-icon-instagram {
+  font-size: 2.5em;
+  color: $second-color;
+}
 
-    .contact-text {
-        flex-direction: column;
+.mobile-nav-icon {
+  display: none;
+}
 
-        h4 {
-            color: $second-color;
-        }
-
-        a {
-            background-color: $second-color;
-            padding: .5em 1em;
-        }
-    }
-
-//NAVIGATION LINK --------------------------------------------------------------------------------
-
-.navigation-b {
+// SCREEN 600PX
+@media (max-width: 37.5em) {
+  //NAVIGATION TOP
+  .navigation-top-list {
     position: absolute;
-    top: -500px;
-    left: 0;
-    z-index: 999;
-    background-color: $second-color;
-    transition: top .5s ease-in-out;
-    
-    .center-container {
-        padding: 0;
-    }
-}
-
-    .navigation-link {
+    top: -10em;
+    right: 0;
     flex-direction: column;
+    padding: 2em;
+    background-color: $second-color;
+    transition: top 0.3s ease-in-out;
 
-    }
+    li {
+      a {
+        padding: 0.3em;
+        text-decoration: none;
+        color: $second-color;
+        background-color: $main-color;
+        transition: background-color 0.3s ease-in-out;
 
-    .nav-link {
-        width: 100%;
-        flex-direction: column;
-        text-align: center;
-        padding: 0;
-
-        li {
-
-            .link {
-                width: 100%;
-                padding: 1em 0;
-                display: block;
-                color: $second-color;
-                background-color: $third-color;
-                border-bottom: 1px solid $second-color;
-
-                &:hover {
-                    color: $second-color;
-                }
-            }
-        
+        &:hover {
+          color: $second-color;
+          background-color: darken($main-color, 10%);
+          transition: background-color 0.3s ease-in-out;
         }
+      }
     }
+  }
 
-    .navigation-link-icon {
+  .navigation-link-icon {
+    display: none;
+  }
+
+  // NAVIGATION BOTTOM
+  .navigation-bottom {
+    position: absolute;
+    top: -25em;
+    padding: 0;
+    background-color: $third-color;
+    transition: top 0.3s ease-in-out;
+
+    .center-container {
+      padding: 0;
+    }
+  }
+
+  .mobile-nav-icon {
+    display: block;
+  }
+
+  .navigation-link {
+    flex-direction: column;
+    gap: 0;
+
+    li {
+      width: 100%;
+
+      .link {
+        display: block;
+        width: 100%;
         padding: 1em 0;
+        text-align: center;
+        color: $second-color;
+        background-color: $main-color;
+        border-bottom: 1px solid $second-color;
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+          color: $third-color;
+          border-bottom: 1px solid $second-color;
+          transition: color 0.3s ease-in-out;
+        }
+      }
     }
+  }
 
-}
+  .navigation-bottom-icon {
+    display: flex;
+    justify-content: center;
+  }
 
-.show-navigation-b {
-    top: 65px;
-    transition: top .5s ease-in-out;
-}
-
-.show-contact-container {
-    top: 62px;
-    transition: top .5s ease-in-out;
+  .navigation-top-list-show,
+  .navigation-bottom-show {
+    top: 2.8em;
+    transition: top 0.3s ease-in-out;
+  }
 }

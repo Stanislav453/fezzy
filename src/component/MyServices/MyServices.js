@@ -1,62 +1,39 @@
 import "./MyServices.scss";
-import { Background, Parallax } from "react-parallax";
-import img from "../../img/services-img.webp"
-import imgStainless from "../../img/services-stainless.webp"
-import imgContruction from "../../img/services-construction-welding.webp"
-import fezzyLogo from "../Fotogallery/fezzy-foto-gallery.png"
+import { Parallax } from "react-parallax";
+import img from "./servecises-img/service-header.webp";
+import { data } from "./data";
 import { Fade } from "react-reveal";
 
-//
-
 export const MyServices = () => {
-    return(
-        <section id="service" className="container services-100">
-            <Parallax strength={800}>
-                <Background className="parallax-bg">
-                    <img className="parallax-bg-img" src={img} alt="services-img" />
-                </Background>
-                    <header id="services" className="text-my-services">
-                        <div className="center-container">
-                            <h2 className="section-hight-text">
-                                služby
-                                <img className="section-header-logo" src={fezzyLogo} alt="fezzy-logo" />
-                            </h2>
-                        </div>
-                    </header>
-                    <div className="container">
-                    <div className="center-container my-services-m">
-                        <div className="content-container-my-services">
-                            <div className="stainless-welding">
-                                <div className="stainless-welding-img">
-                                    <img className="stainless-welding-bg" src={imgStainless} alt="stainicless" />
-                                    <div className="welding-banner">
-                                        <h3 className="welding-banner-text"> Svařování nerezu  </h3>
-                                    </div>
-                                </div>
-                                <ul className="welding-list">
-                                     <Fade> <li>  Svařování oceli  </li></Fade>
-                                    </ul>
-                            </div>
-                            <div className="construction-welding">
-                                <div className="construction-welding-img">
-                                    <img className="stainless-welding-bg" src={imgContruction} alt="stainicless" />
-                                    <div className="welding-banner">
-                                        <h3 className="welding-banner-text">Svařování konstrukci </h3>
-                                    </div>
-                                </div>
-                                <ul className="welding-list">
-                                    <Fade><li> Výroba ocelových konstrukcí  </li></Fade>
-                                    <Fade><li>  Výroba zábradlí    </li></Fade>
-                                    <Fade><li>  Výroba ochranných svodidel pro firmy   </li></Fade>
-                                    <Fade><li>  Výroba nábytku a design prvků    </li> </Fade>
-                                    <Fade><li>  Zakázková výroba na míru    </li> </Fade>
-   
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-            </Parallax>
-        </section>
-    )
-}
+  return (
+    <section id="service" className="container">
+      <header className="service-header">
+        <Parallax bgImage={img} bgImageAlt="the cat" strength={300}>
+          <div className="header-background">
+            <h2 className="service-hight-text">služby</h2>
+          </div>
+        </Parallax>
+      </header>
+      <div className="center-container">
+        <ul className="service-category">
+          {data.map((item, key) => {
+            const { img, title, desc } = item;
+            return (
+              <li key={key} className="service-category-item ">
+                <div className="category-item-img">
+                  <img src={img} alt={title} />
+                  <div className="service-banner">
+                    <h3>{title}</h3>
+                  </div>
+                </div>
+                <div className="category-item-desc">
+                   <p>{desc}</p>
+                </div>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    </section>
+  );
+};

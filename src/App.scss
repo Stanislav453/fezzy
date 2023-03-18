@@ -2,88 +2,80 @@
 
 //GENERAL
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 img {
-    width: 100%;
-    height: auto;
-    vertical-align: middle;
-    display: inline-block;
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+  display: inline-block;
 }
 
 p {
-    font-family: $main-font;
+  font-family: $main-font;
 }
-
-
 
 body {
-    color: #fff;
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
 }
 
-
 button {
-    background-color: transparent;
-    border: none;
-    outline: none;
-    cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
 //SECTION CONTAINER
 
 .container {
-    position: relative;
-    width: 100%;
-    height: auto;
-
+  position: relative;
+  width: 100%;
+  height: auto;
 }
 
 .center-container {
-    max-width: 1200px;
-    height: 100%;
-    margin-inline: auto;
-    padding: 0 1em;
-
+  max-width: 1200px;
+  height: 100%;
+  margin-inline: auto;
+  padding: 0 1em;
 }
 
 //SECTION HEADER
 
 .h-color {
-    background-color: $third-color;
+  background-color: $third-color;
 }
 
 .section-hight-text {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 4.5em;
-    font-family: Arial, Helvetica, sans-serif;
-    text-transform: uppercase;
-    padding: .5em 0;
-    color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 4.5em;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  padding: 0.5em 0;
+  color: #000;
 }
 
 .section-header-logo {
-    width: 76px;
-    height: 76px;
+  width: 76px;
+  height: 76px;
 }
 
-@media  (max-width: 620px) {
+@media (max-width: 620px) {
+  .section-hight-text {
+    font-size: 2.5em;
+  }
 
-    .section-hight-text {
-        font-size: 2.5em;
-    }
-
-    .section-header-logo {
-        display: none;
-    }
+  .section-header-logo {
+    display: none;
+  }
 }
-
-
