@@ -15,7 +15,10 @@ export const BackToHomeButton = () => {
     }
   };
 
-  window.addEventListener("scroll", showButton);
+    useEffect(() => {
+    window.addEventListener("scroll", showButton);
+  }, []);
+
 
   //back-to-home-button
   return (
